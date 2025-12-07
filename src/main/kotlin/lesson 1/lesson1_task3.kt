@@ -1,16 +1,14 @@
 fun main() {
 
-    val year = 1961
-    val hour = 9
-    val minute = 7
+    val year = "1961"
+    val hour = "09"
+    val minute = "07"
 
     println(year)
 
-    val hourStr = hour.toString().padStart(2, '0')
-    val minuteStr = minute.toString().padStart(2, '0')
 
-    println(hourStr)
-    println(minuteStr)
+    println(hour)
+    println(minute)
 
     val newHour = 10
     val newMinute = 55
