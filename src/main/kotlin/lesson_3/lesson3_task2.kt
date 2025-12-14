@@ -3,13 +3,15 @@ package org.example.lesson_3
 fun main() {
 
     val womenName = "Татьяна"
-    val womenSurname = "Андреева"
+    var womenSurname = "Андреева"
     val womenPatronymic = "Сергеевна"
-    val womenNewSurname = "Сидорова"
-    val womanAge20 = "20"
-    val womanAge22 = "22"
+    var womanAge = "20"
 
-    println("$womenSurname $womenName $womenPatronymic, $womanAge20")
-    println("$womenNewSurname $womenName $womenPatronymic, $womanAge22")
+    println("$womenSurname $womenName $womenPatronymic, $womanAge")
+
+    womenSurname= "Сидорова"
+    womanAge = "22"
+
+    println("$womenSurname $womenName $womenPatronymic, $womanAge")
 
 }
