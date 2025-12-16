@@ -12,5 +12,4 @@ fun main() {
     println(from)
     println(to)
     println(moveNumberPart)
-
 }
