@@ -1,15 +1,22 @@
 package org.example.lesson_5
 
+import kotlin.random.Random
+
 fun main() {
 
-    println("Докажите, что вы не бот \n" +
-            "Решите пример: 5 + 4")
-    val answerVerification = readln().toInt()
-    val checkVerification = 9
+    val random = Random.Default
+    val number1 = random.nextInt(11)
+    val number2 = random.nextInt(11)
 
-    if (answerVerification == checkVerification) {
+    println("Докажите, что вы не бот \n" +
+            "Решите пример: $number1 + $number2")
+
+    val answer = readln().toInt()
+    val checkVerification = number1 + number2
+
+    if (answer== checkVerification) {
         println("Добро пожаловать!")
-    }else{
+    } else {
         println("Доступ запрещен.")
     }
 
