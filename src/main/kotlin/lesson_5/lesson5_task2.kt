@@ -9,7 +9,7 @@ fun main() {
 
     if ((currentYear - userYearOfBirth) >= AGE_OF_MAJORITY) {
         println("Показать экран со скрытым контентом.")
-    }else {
+    } else {
         println("Доступ запрещен.")
     }
 
