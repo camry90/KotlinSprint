@@ -3,6 +3,9 @@ package org.example.lesson_4
 const val MIN_PERSONAL = 55
 const val RECOMMENDED_PERSONAL = 70
 const val MEALS_BOX = 50
+const val BOATS_DAMAGED = true
+const val BOATS_NOT_DAMAGED = false
+const val WEATHER_IS_GOOD = true
 
 fun main() {
 
@@ -15,9 +18,9 @@ fun main() {
     println("Благоприятность метеусловий: ")
     val isWeatherGood = readln().toBoolean()
 
-    val canSail = (!hasDamage && countPersonal in MIN_PERSONAL..RECOMMENDED_PERSONAL &&
-            countMealsBox > MEALS_BOX) || (hasDamage && countPersonal == RECOMMENDED_PERSONAL &&
-            isWeatherGood &&  countMealsBox >= MEALS_BOX)
+    val canSail = (hasDamage == BOATS_NOT_DAMAGED && countPersonal in MIN_PERSONAL..RECOMMENDED_PERSONAL &&
+            countMealsBox > MEALS_BOX) || (hasDamage == BOATS_DAMAGED && countPersonal == RECOMMENDED_PERSONAL &&
+            isWeatherGood == WEATHER_IS_GOOD && countMealsBox >= MEALS_BOX)
 
     println("Может ли корабль отправиться в долгосрочное плавание? $canSail")
 
