@@ -21,5 +21,4 @@ fun main() {
         else -> "Ожирение"
     }
     println("Ваш ИМТ - ${"%.2f".format(bmi)}. У вас $bmiCategory")
-
 }
