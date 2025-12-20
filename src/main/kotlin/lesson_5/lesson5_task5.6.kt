@@ -1,7 +1,5 @@
 package org.example.lesson_5
 
-import kotlin.math.sqrt
-
 const val CENTIMETERS_TO_METERS = 100
 const val NOT_ENOUGH_BODY_MASS = 18.5
 const val NORMAL_BODY_MASS = 25
@@ -12,9 +10,7 @@ fun main() {
     println("Введите ваш вес в кг: ")
     val userWeight = readln().toDouble()
     println("Введите ваш рост в см: ")
-    var userHeight = readln().toDouble()
-
-    userHeight = userHeight / CENTIMETERS_TO_METERS
+    val userHeight = readln().toDouble() / CENTIMETERS_TO_METERS
 
     val bmi = userWeight / (userHeight * userHeight)
 
