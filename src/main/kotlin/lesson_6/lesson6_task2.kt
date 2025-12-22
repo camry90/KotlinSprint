@@ -1,15 +1,15 @@
 package org.example.lesson_6
 
-const val TIMER_END = 0
+const val SECONDS_TO_MILLIS = 1000L
 
 fun main() {
 
     println("На сколько секунд засечь?")
-    var seconds = readln().toInt()
+    val seconds = readln().toInt()
+    val millis = seconds * SECONDS_TO_MILLIS
 
-    while (seconds >= TIMER_END) {
-        println("Прошло ${seconds--} ")
-        Thread.sleep(1000)
-    }
+    Thread.sleep(millis)
+
+    println("Прошло $seconds секунд")
 
 }
