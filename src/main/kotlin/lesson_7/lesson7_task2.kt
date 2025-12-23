@@ -15,6 +15,6 @@ fun main() {
             println("Добро пожаловать!")
         }
 
-    }while (randomCode != userAuth)
+    } while (randomCode != userAuth)
 
 }
