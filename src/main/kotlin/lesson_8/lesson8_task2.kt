@@ -1,25 +1,20 @@
 package org.example.lesson_8
 
 fun main() {
-    val receiptBolognese = arrayOf(
+    val recipeBolognese = arrayOf(
         "паста", "говядина", "морковь",
         "томаты", "базилик", "перец", "вода"
     )
 
-    println("Какой ингридиент вы хотите найти: ")
+    println("Какой ингредиент вы хотите найти: ")
     val findIngredient = readln()
-    var isFound = false
 
-    for (i in receiptBolognese) {
+    for (i in recipeBolognese) {
         if (i == findIngredient) {
-            isFound = true
-            break
+            println("Ингредиент $findIngredient в рецепте есть")
+            return
         }
     }
+    println("Такого ингредиента в рецепте нет")
 
-    if (isFound) {
-        println("Ингредиент $findIngredient в рецепте есть")
-    } else {
-        println("Такого ингредиента в рецепте нет")
-    }
 }
