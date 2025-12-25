@@ -7,9 +7,7 @@ fun main() {
         "томаты", "базилик", "перец", "вода"
     )
 
-    for (i in receiptBolognese) {
-        println(i)
-    }
+    println(receiptBolognese.joinToString(", "))
 
     println("\nКакой ингредиент вы хотите заменить: ")
     val userDeletePick = readln()
@@ -20,10 +18,8 @@ fun main() {
         println("Какой ингредиент вы бы хотели добавить: ")
         val userAddPick = readln()
         receiptBolognese[index] = userAddPick
-        println("Готов! Вы сохраниои следующий список:\n ")
-        for (i in receiptBolognese) {
-            println(i)
-        }
+        println("Готово! Вы сохранили следующий список:\n ")
+        println(receiptBolognese.joinToString(", "))
     } else {
         println("Такого ингредиента нет в списке")
     }
