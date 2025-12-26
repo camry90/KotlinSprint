@@ -17,7 +17,7 @@ fun main() {
         "На $userPortion порций вам понадобится:" +
                 " Яиц - ${scaledPortion[0]} шт.," +
                 " молока - ${scaledPortion[1]} мл.," +
-                "сливочного масла - ${scaledPortion[2]} гр."
+                " сливочного масла - ${scaledPortion[2]} гр."
     )
 
 }
