@@ -13,7 +13,7 @@ fun main() {
     }
 
     val sortedIngredientList = ingredientList
-        .distinct()
+        .toSet()
         .sorted()
         .joinToString(", ")
         .replaceFirstChar { it.uppercaseChar() }
