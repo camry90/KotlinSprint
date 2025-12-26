@@ -7,7 +7,7 @@ fun main() {
     val ingredientsArray = Array(countIngredients) { "" }
 
     for (i in ingredientsArray.indices) {
-        println("Введите ${i+1} инредиент: ")
+        println("Введите ${i + 1} инредиент: ")
         ingredientsArray[i] = readln()
     }
 
