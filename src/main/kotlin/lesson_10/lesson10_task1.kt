@@ -12,12 +12,10 @@ fun main() {
     val computerTurn = rollDice()
     println("Выпало число $computerTurn")
 
-    if (personTurn > computerTurn) {
-        println("Победило человечество")
-    } else if (personTurn < computerTurn) {
-        println("Победила машина")
-    } else {
-        println("Победила дружба")
+    when {
+        personTurn > computerTurn -> println("Победило человечество")
+        personTurn < computerTurn -> println("Победила машина")
+        else -> println("Победила дружба")
     }
 
 }
