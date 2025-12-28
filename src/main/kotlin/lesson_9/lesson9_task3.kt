@@ -19,5 +19,4 @@ fun main() {
                 " молока - ${scaledPortion[1]} мл.," +
                 " сливочного масла - ${scaledPortion[2]} гр."
     )
-
 }
