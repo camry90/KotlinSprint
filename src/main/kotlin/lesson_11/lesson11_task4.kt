@@ -2,18 +2,18 @@ package org.example.lesson_11
 
 class CategoryRecipe(
     coverFood: Int,
-    nameFood: List<String>,
+    recipeList: List<Recipe>,
     bioFood: String,
 )
 
 class Recipe(
     coverFood: Int,
-    nameTypeFood: List<String>,
+    recipeList: List<Ingredient>,
 )
 
 class Ingredient(
     portionsCount: Int,
     ingredientsList: List<String>,
-    countIngredientsList: List<Int>,
     recipeManual: String
 )
+    
