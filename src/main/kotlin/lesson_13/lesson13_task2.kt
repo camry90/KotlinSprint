@@ -8,8 +8,8 @@ class PhoneDirectory1(
 
     fun printInfo() {
         println(
-            "- Имя: ${this.name}\n" +
-                    "- Номер телефона: ${this.phoneNumber}\n" +
+            "- Имя: ${name}\n" +
+                    "- Номер телефона: ${phoneNumber}\n" +
                     "- Компания: ${company ?: "<не указано>"}\n"
         )
     }
