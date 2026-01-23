@@ -8,12 +8,11 @@ class CategoryRecipe(
 
 class Recipe(
     coverFood: Int,
-    recipeList: List<Ingredient>,
+    ingredientsList: List<Ingredient>,
 )
 
 class Ingredient(
     portionsCount: Int,
-    ingredientsList: List<String>,
     recipeManual: String
 )
     
