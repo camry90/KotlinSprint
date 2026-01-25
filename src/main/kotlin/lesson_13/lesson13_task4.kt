@@ -10,7 +10,7 @@ class PhoneDirectory4(
         println(
             "- Имя: ${name}\n" +
                     "- Номер телефона: ${phoneNumber}\n" +
-                    "- Компания: ${company}\n"
+                    "- Компания: ${company ?: "<не указано>"}\n"
         )
     }
 }
@@ -18,6 +18,9 @@ class PhoneDirectory4(
 fun main() {
 
     val contactList = mutableListOf<PhoneDirectory4>()
+
+    println("Сколько контактов вы хотите добавить? ")
+    var countTry = readln().toInt()
 
     do {
 
@@ -37,9 +40,9 @@ fun main() {
         val company = companyInput.ifEmpty { null }
 
         contactList.add(PhoneDirectory4(name, phoneNumber, company))
+        countTry--
 
-
-    } while (contactList.size == 0)
+    } while (countTry != 0)
 
     contactList.forEach { it.printInfo() }
 }
