@@ -3,19 +3,16 @@ package org.example.lesson_12
 const val DAYS_IN_MONTH = 30
 
 class Weather3(
-    _dayTemperature: Int,
-    _nightTemperature: Int,
-    _rainfall: Int,
+    val dayTemperature: Int,
+    val nightTemperature: Int,
+    val rainfall: Int,
 ) {
-    var dayTemperature = _dayTemperature
-    var nightTemperature = _nightTemperature
-    var rainfall = _rainfall
 
-    init {
+    fun printInfo() {
         println(
-            "Дневаная температура: ${this.dayTemperature}\n" +
-                    "Ночная температура: ${this.nightTemperature}\n" +
-                    "Количество осадков: ${this.rainfall}"
+            "Дневная температура: $dayTemperature\n" +
+                    "Ночная температура: $nightTemperature\n" +
+                    "Количество осадков: $rainfall"
         )
     }
 
@@ -25,12 +22,10 @@ fun main() {
 
     val randomTemperature = 0..20
     val randomRainfall = 0..52
-    val weatherList = mutableListOf<Weather3>()
-
-
-    for (i in 1..DAYS_IN_MONTH) {
-        weatherList.add(Weather3(randomTemperature.random(), randomTemperature.random(), randomRainfall.random()))
+    val weatherList = List(DAYS_IN_MONTH) {
+        Weather3(randomTemperature.random(), randomTemperature.random(), randomRainfall.random())
     }
+
 
     val daytime = weatherList.map { it.dayTemperature }
     val nighttime = weatherList.map { it.nightTemperature }
