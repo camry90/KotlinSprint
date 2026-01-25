@@ -3,20 +3,20 @@ package org.example.lesson_12
 const val ONE_CELSIUS_IN_KELVIN = 273.15
 
 class Weather2(
-    _dayTemprature: Int,
-    _nightTemprature: Int,
-    _rainfall: Int,
+    kelvinDayTemperature: Int,
+    kelvinNightTemperature: Int,
+    kRainfall: Int,
 ) {
 
-    var dayTemprature = (_dayTemprature - ONE_CELSIUS_IN_KELVIN).toInt()
-    var nightTemprature = (_nightTemprature - ONE_CELSIUS_IN_KELVIN).toInt()
-    var rainfall = _rainfall
+    val dayTemperature = (kelvinDayTemperature - ONE_CELSIUS_IN_KELVIN).toInt()
+    val nightTemperature = (kelvinNightTemperature - ONE_CELSIUS_IN_KELVIN).toInt()
+    val rainfall = kRainfall
 
     fun printInfo() {
         println(
-            "Дневаная температура: ${this.dayTemprature}\n" +
-                    "Ночная температура: ${this.nightTemprature}\n" +
-                    "Количество осадков: ${this.rainfall}"
+            "Дневаная температура: ${dayTemperature}\n" +
+                    "Ночная температура: ${nightTemperature}\n" +
+                    "Количество осадков: ${rainfall}"
         )
     }
 
