@@ -1,24 +1,22 @@
 package org.example.lesson_13
 
-class PhoneDirectory1(
+class PhoneBookEntry(
     val name: String,
     val phoneNumber: Long,
-    val company: String?,
+    val company: String? = null,
 ) {
 
     fun printInfo() {
         println(
-            "- Имя: ${name}\n" +
-                    "- Номер телефона: ${phoneNumber}\n" +
-                    "- Компания: ${company ?: "<не указано>"}\n"
+            "-Имя: $name\n-Номер телефона: $phoneNumber\n-Компания: ${company ?: "<не указано>"}\n"
         )
     }
 }
 
 fun main() {
 
-    val contact1 = PhoneDirectory1("Tolya", 87651658998, null)
+    val contact1 = PhoneBookEntry("Tolya", 87651658998)
     contact1.printInfo()
-    val contact2 = PhoneDirectory1("Rombik", 89993275513, "Google")
+    val contact2 = PhoneBookEntry("Rombik", 89993275513, "Google")
     contact2.printInfo()
 }
