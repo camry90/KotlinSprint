@@ -2,8 +2,10 @@ package org.example.lesson_16
 
 class Order(
     val orderNumber: Int,
-    var status: String
+    status: String,
 ) {
+
+    private var status: String = "начальный статус"
 
     private fun changeStatus(newStatus: String) {
         status = newStatus
@@ -19,7 +21,7 @@ class Order(
 
 fun main() {
 
-    val order1 = Order(1, "Not ready")
+    val order1 = Order(1, "В работе")
 
     println("Введите новый статус заказа: ")
     order1.sendRequest(readln())
