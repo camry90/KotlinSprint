@@ -1,34 +1,20 @@
 package org.example.lesson_18
 
-open class DiceType {
+open class DiceType(
+    private val sides: Int,
+) {
 
-    open fun getDiceNumber() = ""
-}
-
-class DiceFour : DiceType() {
-
-    override fun getDiceNumber() : String {
-        val number = (1..4).random()
-        return "Выпало: $number"
-    }
-
-}
-
-class DiceSix : DiceType() {
-
-    override fun getDiceNumber() : String {
-        val number = (1..6).random()
-        return "Выпало: $number"
+    open fun getDiceNumber() {
+        val number = (1..sides).random()
+        println("Выпало: $number")
     }
 }
 
-class DiceEight : DiceType() {
+class DiceFour : DiceType(4)
 
-    override fun getDiceNumber() : String {
-        val number = (1..8).random()
-        return "Выпало: $number"
-    }
-}
+class DiceSix : DiceType(6)
+
+class DiceEight : DiceType(8)
 
 fun main() {
 
@@ -37,5 +23,5 @@ fun main() {
     val dice3 = DiceEight()
 
     val diceList: List<DiceType> = listOf(dice1, dice2, dice3)
-    diceList.forEach { println(it.getDiceNumber()) }
+    diceList.forEach { it.getDiceNumber() }
 }
