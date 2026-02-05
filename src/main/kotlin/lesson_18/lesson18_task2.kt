@@ -1,8 +1,8 @@
 package org.example.lesson_18
 
-open class DiceType(
-    private val sides: Int,
-) {
+open class DiceType {
+
+    open val sides: Int = 0
 
     open fun getDiceNumber() {
         val number = (1..sides).random()
@@ -10,11 +10,17 @@ open class DiceType(
     }
 }
 
-class DiceFour : DiceType(4)
+class DiceFour : DiceType() {
+    override val sides = 4
+}
 
-class DiceSix : DiceType(6)
+class DiceSix : DiceType() {
+    override val sides = 6
+}
 
-class DiceEight : DiceType(8)
+class DiceEight : DiceType() {
+    override val sides = 8
+}
 
 fun main() {
 
