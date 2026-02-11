@@ -6,7 +6,6 @@ fun main() {
 
     val file = File("lesson21-4.txt")
     file.writeInStartFile("Start")
-
 }
 
 fun File.writeInStartFile(string: String) {
