@@ -1,15 +1,17 @@
 ﻿package org.example.lesson_22
 
-class MainScreenViewModel(var mainScreenState: MainScreenState) {
+class MainScreenViewModel() {
+
+    var state: MainScreenState = MainScreenState()
 
     fun loadData() {
-        mainScreenState = mainScreenState.copy(data = "Нет данных")
-        mainScreenState = mainScreenState.copy(isLoading = true)
-        mainScreenState = mainScreenState.copy(isLoading = false)
+        state = state.copy(data = null)
+        state = state.copy(isLoading = true)
+        state = state.copy(data = "Data from server", isLoading = false)
     }
 }
 
 data class MainScreenState(
-    val data: String,
+    val data: String? = null,
     val isLoading: Boolean = false,
 )
