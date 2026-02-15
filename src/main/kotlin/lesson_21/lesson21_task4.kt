@@ -10,9 +10,9 @@ fun main() {
 
 fun File.writeInStartFile(string: String) {
 
-    val stringList: MutableList<String> = this.readLines().toMutableList()
-    println(stringList)
     val lowerString = string.lowercase()
-    stringList.addFirst(lowerString)
-    writeText(stringList.joinToString(separator = " "))
+    val lines = readLines()
+    val newLines = listOf(lowerString) + lines
+    writeText(newLines.joinToString(separator = "\n"))
+
 }
