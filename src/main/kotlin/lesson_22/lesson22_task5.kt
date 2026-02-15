@@ -3,7 +3,7 @@
 data class GalacticGuide(
     val place: String,
     val placeBio: String,
-    val data: String,
+    val date: String,
     val placeDistance: String,
 )
 
@@ -16,7 +16,8 @@ fun main() {
         "4.3 св. лет"
     )
 
-    val (place, placeBio, data, placeDistance) = starSystem
-
-    println("$place, $placeBio, $data, $placeDistance")
+    println(starSystem.component1())
+    println(starSystem.component2())
+    println(starSystem.component3())
+    println(starSystem.component4())
 }
