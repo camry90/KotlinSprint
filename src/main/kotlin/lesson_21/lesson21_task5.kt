@@ -16,6 +16,6 @@ fun main() {
     println(player.skills.maxCategory())
 }
 
-fun Map<String, Int>.maxCategory(): String {
-    return this.maxBy { it.key }.key
+fun Map<String, Int>.maxCategory(): String? {
+    return this.maxByOrNull { it.value }?.key
 }
